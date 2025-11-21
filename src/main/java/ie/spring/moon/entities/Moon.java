@@ -3,7 +3,6 @@ package ie.spring.moon.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Entity
 @Table(name = "moons")
 @Data

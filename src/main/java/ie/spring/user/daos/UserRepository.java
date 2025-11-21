@@ -1,6 +1,6 @@
-package ie.spring.moon.daos;
+package ie.spring.user.daos;
 
-import ie.spring.moon.entities.User;
+import ie.spring.user.entities.User;
 
 import java.util.List;
 import java.util.Optional;
