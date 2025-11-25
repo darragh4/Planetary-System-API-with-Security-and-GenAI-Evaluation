@@ -6,5 +6,3 @@ INSERT INTO moons (name, diameter_km, orbital_period_days, planet_id)
 VALUES ('Moon', 3474, 27, 1),
        ('Europa', 3121, 85, 2);
 
-INSERT INTO users (username, password, role)
-VALUES ('admin', 'hashed-password-here', 0);
