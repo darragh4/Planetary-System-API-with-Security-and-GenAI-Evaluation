@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
 @RestControllerAdvice
-public class GlobalExeptionHandler {
+public class GlobalExceptionHandler {
 
     // Handle validation on @RequestBody DTOs (@Valid)
     @ExceptionHandler(MethodArgumentNotValidException.class)
