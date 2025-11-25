@@ -76,4 +76,17 @@ public class MoonServiceImpl implements MoonService {
                 moon.getPlanet_id()
         );
     }
+
+    @Override
+    public List<MoonDTO> findByPlanetName(String planetName) {
+        return moonRepository.findByPlanetName(planetName)
+                .stream()
+                .map(this::toDto)
+                .toList();
+    }
+
+    @Override
+    public int countByPlanetName(String planetName) {
+        return moonRepository.countByPlanetName(planetName);
+    }
 }

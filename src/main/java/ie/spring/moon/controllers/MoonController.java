@@ -53,4 +53,14 @@ public class MoonController {
     public int countMoonsByPlanetId(@PathVariable int planetId) {
         return moonService.countByPlanetId(planetId);
     }
+
+    @GetMapping("/planet/name/{planetName}")
+    public List<MoonDTO> getMoonsByPlanetName(@PathVariable String planetName) {
+        return moonService.findByPlanetName(planetName);
+    }
+
+    @GetMapping("/planet/name/{planetName}/count")
+    public int countMoonsByPlanetName(@PathVariable String planetName) {
+        return moonService.countByPlanetName(planetName);
+    }
 }

@@ -18,4 +18,8 @@ public interface MoonService {
     List<MoonDTO> findByPlanetId(int planetId);
 
     int countByPlanetId(int planetId);
+
+    List<MoonDTO> findByPlanetName(String planetName);
+
+    int countByPlanetName(String planetName);
 }

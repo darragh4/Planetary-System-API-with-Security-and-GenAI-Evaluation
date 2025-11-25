@@ -20,4 +20,8 @@ public interface MoonRepository {
     List<Moon> findByPlanetId(int planetId);
 
     int countByPlanetId(int planetId);
+
+    List<Moon> findByPlanetName(String planetName);
+
+    int countByPlanetName(String planetName);
 }

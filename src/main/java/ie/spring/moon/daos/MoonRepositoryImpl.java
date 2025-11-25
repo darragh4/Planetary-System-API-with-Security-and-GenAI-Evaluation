@@ -94,4 +94,34 @@ public class MoonRepositoryImpl implements ie.spring.moon.daos.MoonRepository {
                 .query(Integer.class)
                 .single();
     }
+
+    @Override
+    public List<Moon> findByPlanetName(String planetName) {
+        String sql = """
+            SELECT m.*
+            FROM moons m
+            JOIN planets p ON m.planet_id = p.planet_id
+            WHERE p.name = :planet_name
+            """;
+
+        return jdbcClient.sql(sql)
+                .param("planet_name", planetName)
+                .query(Moon.class)
+                .list();
+    }
+
+    @Override
+    public int countByPlanetName(String planetName) {
+        String sql = """
+            SELECT COUNT(*)
+            FROM moons m
+            JOIN planets p ON m.planet_id = p.planet_id
+            WHERE p.name = :planet_name
+        """;
+
+        return jdbcClient.sql(sql)
+                .param("planet_name", planetName)
+                .query(Integer.class)
+                .single();
+    }
 }
