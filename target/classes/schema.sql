@@ -14,10 +14,9 @@ CREATE TABLE moons (
     orbital_period_days INT NOT NULL,
     planet_id INT NOT NULL
 );
-
 CREATE TABLE users (
     user_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     username VARCHAR(100) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    role INT NOT NULL
+    role VARCHAR(20) NOT NULL    --
 );

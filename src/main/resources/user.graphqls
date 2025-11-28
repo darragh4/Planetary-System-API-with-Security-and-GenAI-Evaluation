@@ -5,21 +5,12 @@ type User {
 }
 
 type Query {
-    username: String!
-    password: String!
-    role: String!
-}
-
-type Query {
     userById(id: Int!): User
+    createUser(input: CreateUserInput!): User
 }
 
 input CreateUserInput {
     username: String!
     password: String!
     role: String!
-}
-
-type Mutation {
-    createUser(input: CreateInput!): User
 }
