@@ -27,7 +27,7 @@ public class UserRepositoryImpl implements UserRepository {
         jdbcClient.sql(sql)
                 .param("username", user.getUsername())
                 .param("password", user.getPassword())
-                .param("role", user.getRole().ordinal())
+                .param("role", user.getRole().name())
                 .update(keyHolder);
 
         if (keyHolder.getKey() != null) {
